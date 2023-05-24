@@ -1,0 +1,105 @@
+body.bodyFP{
+    grid-template-areas: 
+    'header header'
+    'main section'
+    'footer footer';
+}
+
+header{
+    grid-area: header;
+}
+
+footer{
+    grid-area: footer;
+}
+
+main{
+    grid-area: main;
+    max-width: 75%;
+    margin-right: 0;
+    margin: 0 auto;
+}
+
+section{
+    grid-area: section;
+    margin: 1%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+section>p{
+    margin: 0;
+}
+
+div#aside{
+    margin: 3% auto;
+    border: 1px dotted black;
+    max-width: 60%;
+}
+
+div#aside>h4, div#aside>p, div#aside>h3{
+    text-align: center;
+    color: black;
+}
+
+
+.linkApoie{
+    text-decoration: none;
+    background-color: #E8D1F6;
+    color: black;
+    font-size: 1rem;
+    max-width: 100%;
+    border: 1px solid black;
+    padding: 1%;
+    max-width: 100%;
+}
+
+ul#botoes{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+ul, li{
+    display: inline;
+    max-width: 80%;
+}
+
+form, fieldset{
+    max-width: 80%;
+    padding: 2%;
+}
+
+form label{
+    display: block;
+}
+
+input, select, textarea{
+    max-width: 100%;
+    padding: 10px;
+    margin: 5px 0px 5px 2px;
+}
+
+.bairro, .email, .cidade, .cpf, .nascimento{
+    display: inline;
+}
+
+.endereco{
+    width: 33%;
+}
+
+.bairro, .cidade{
+    width: 23.5%;
+}
+
+.telefone, .email, .rg, .cpf{
+    width: 42.5%;
+}
+
+#period{
+    display: block;
+}
+
+.linhaCompleta{
+    width: 90%;
+    margin: 0 auto;
+}

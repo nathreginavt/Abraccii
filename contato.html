@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abraccii</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+    <script src="main.js" defer></script>
+
+</head>
+
+<body class="bodyOutros">
+    <header>
+        <a href="#main" class="firstLink" accesskey="p"> [P] Conteúdo principal</a>
+        <a href="index.html" id="linkHeader">
+            <img src="img/logo.png" alt="Logo Abraccii" id="logo">
+            <img src="img/ABRACCII.png" alt="Abraccii" id="nome">
+        </a>
+
+        <nav>
+            <a href="quemsomos.html">Quem Somos</a>
+            <a href="objetivo.html">Objetivo</a>
+            <a href="contato.html">Contato</a>
+            <a href="apoie.html" id="apoie">APOIE</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1>Contato</h1>
+        <form class="formContato" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" method="post">
+
+            <h2>Avisos - Dados inválidos</h2>
+            <div class="avisos">
+                <p>- Nome completo inválido, o campo não pode estar em branco</p>
+                <p>- O e-mail obrigatoriamente tem que estar acompanhado do @</p>
+                <p>- Telefone inválido, tem que conter DDD + 9 dígitos</p>
+                <p>- Mensagem inválida, o campo não pode estar em branco</p>
+            </div>
+
+            <fieldset class="conteudoForm">
+                <legend><b>Dados cadastrais</b></legend>
+                
+                <small> * = Campo Obrigatório</small>
+                <br><br>
+
+                <div class="inputsForm">
+                    <label for="nomeForm">* Nome: </label>
+
+                    <input type="text" id="nomeForm" name="nomeForm" class="nomeC" placeholder="Nome Completo" required>
+                </div>
+
+                <div class="inputsForm">
+                    <label for="emailForm">* E-mail: </label>
+                    <input type="email" id="emailForm" name="emailForm" class="emailC" placeholder="E-mail" required>
+                </div>
+                <div class="inputsForm">
+                    <label for="telefoneForm">* Telefone: </label>
+                    <input type="tel" id="telefoneForm"  name="telefoneForm" class="telefoneC" placeholder="Telefone"
+                        required minlength="11" maxlength="11">
+                </div>
+            </fieldset>
+
+            <fieldset class="conteudoForm">
+                <legend><b>Envie-nos a sua mensagem!</b></legend>
+                <div class="inputsForm">
+                    <label for="selectC">Motivo do contato: </label>
+                    <select id="selectC" required>
+                        <option value="duvida">Dúvidas, perguntas, questionamentos</option>
+                        <option value="sugestao">Sugestões de melhoria</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="relato">Relato ou História na Abraccii</option>
+                        <option value="apoiar"> Quero apoiar </option>
+                        <option value="outro"> Outro </option>
+
+                    </select>
+                </div>
+                <div class="inputsForm">
+                    <label for="mensagemC">* Mensagem: </label>
+                    <textarea rows="10" cols="50" id="mensagemC" placeholder="Mensagem" required></textarea>
+                </div>
+            </fieldset>
+                <button type="submit" id="btnContato">Enviar</button>
+            
+            
+        </form>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.411563753804!2d-46.334336885575084!3d-23.945882481788185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce038224d48849%3A0xe3b8c2777f0794b8!2sAbraccii!5e0!3m2!1spt-BR!2sbr!4v1669335304702!5m2!1spt-BR!2sbr"
+            id="mapa" referrerpolicy="no-referrer-when-downgrade" title="Mapa da localização da Abraccii">
+        </iframe>
+
+
+        <div id="atendimento">
+            <p>Atendimento: </p>
+            <p>(13) 3345-7800 </p>
+            <p>(13) 97411-1940</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="divVazio"> </div>
+
+        <div id="enderecoA">
+            <p class="titleFooter">Endereço</p>
+            <p>Rua Silveira Lobo, nº 01 </p>
+            <p>Vila Mathias, Santos/SP</p>
+            <p>CEP 11075-290</p>
+        </div>
+
+        <div id="funcionamentoA">
+            <p class="titleFooter">Funcionamento</p>
+            <p>Segunda à sexta</p>
+            <p>Das 09h as 17h</p>
+        </div>
+
+        <div id="contatoA">
+            <p class="titleFooter">Contato</p>
+            <p>(13) 3345-7800</p>
+            <p>(13) 97411-1940</p>
+            <p>contato@abraccii.org.br</p>
+        </div>
+
+        <div id="redesA">
+            <p class="titleFooter">Redes Sociais</p>
+            <ul>
+                <li><a href="https://www.instagram.com/abraccii/" target="_blank" id="insta">Instagram</a></li>
+                <li><a href="https://www.facebook.com/abracciiong/" target="_blank">Facebook</a></li>
+                <li><a href="https://www.youtube.com/channel/UCHPv1npXBF4Qgx-eMDujgrA" target="_blank">Youtube</a></li>
+                <li><a href="https://www.linkedin.com/in/abraccii-ong-0b58619a/?originalSubdomain=br"
+                        target="_blank">Linkedin</a></li>
+            </ul>
+        </div>
+
+        <div class="divVazio"> </div>
+    </footer>
+
+</body>
+
+</html>

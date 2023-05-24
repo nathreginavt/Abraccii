@@ -1,0 +1,107 @@
+@media screen and (max-width: 820px){
+
+    header nav, header img {
+        display: block;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    header nav{
+        padding: 1%;
+    }
+
+    header nav a{
+        padding: 0 1%;
+    }
+
+    nav a#facaparte{
+        background-color: #E8D1F6;
+        border: none;
+        padding: 0;
+        text-decoration: yellow underline;
+    }
+
+    #logo, aside{
+        display: none;
+        margin: 0 auto;
+    }
+
+    fieldset{
+        display: block;
+        max-width: 100%;
+    }
+
+    .tableObj td{
+        display: block;
+        margin: 2px;
+    } 
+
+    .btnEnviar{
+        display: block;
+    }
+
+    #formVoluntario input{
+        display: block;
+        width: 90%;
+        margin: 3% auto;
+        padding: 4%;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    body.bodyFP{
+        grid-template-areas: 
+        'header'
+        'main'
+        'section'
+        'footer';
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #resumos{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1%;
+    }
+
+    .resInst, .resMissao, .resPublico {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width:820px){
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer div{
+        padding-bottom: 1%;
+    }
+
+    footer .divVazio{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px){
+    footer{
+        display: block;
+    }
+
+    footer div{
+        padding: 2%;
+    }
+
+    header nav a{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .tableApo td{
+        display: block;
+        margin: auto;
+    }
+}
