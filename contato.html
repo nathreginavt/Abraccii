@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
-    <script src="main.js" defer></script>
+    <script src="form.js" defer></script>
 
 </head>
 
@@ -31,15 +31,23 @@
 
     <main id="main">
         <h1>Contato</h1>
-        <form class="formContato" action="http://hub.fatecrl.edu.br/sobrino/recebe-v2.php" method="post">
+        <form class="formContato" method="post">
 
-            <h2>Avisos - Dados inválidos</h2>
+            <h2 id="aviso">Avisos - Dados inválidos</h2>
             <div class="avisos">
-                <p>- Nome completo inválido, o campo não pode estar em branco</p>
+              <p id="avisoNome">- Nome completo inválido, o campo não pode estar em branco</p>
+              <p id="avisoEmail">- E-mail inválido, preencha no padrão seunome@email.com</p>
+              <p id="avisoTelefone">- Telefone inválido, preencha no padrão (DDD) XXXXX-XXXX</p>
+              <p id="avisoMsg">- Mensagem inválida, o campo não pode estar em branco</p>
+            </div>
+
+            <!-- <h2>Avisos - Dados inválidos</h2>
+            <div class="avisos">
+                <p id="aviso">- Nome completo inválido, o campo não pode estar em branco</p>
                 <p>- O e-mail obrigatoriamente tem que estar acompanhado do @</p>
                 <p>- Telefone inválido, tem que conter DDD + 9 dígitos</p>
                 <p>- Mensagem inválida, o campo não pode estar em branco</p>
-            </div>
+            </div> -->
 
             <fieldset class="conteudoForm">
                 <legend><b>Dados cadastrais</b></legend>
@@ -60,7 +68,7 @@
                 <div class="inputsForm">
                     <label for="telefoneForm">* Telefone: </label>
                     <input type="tel" id="telefoneForm"  name="telefoneForm" class="telefoneC" placeholder="Telefone"
-                        required minlength="11" maxlength="11">
+                        required minlength="11" >
                 </div>
             </fieldset>
 

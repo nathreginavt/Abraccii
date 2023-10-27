@@ -240,7 +240,7 @@ main {
     padding-left: 10px;
 }
 
-/*FORMUL� RIO CONTATO*/
+/*FORMULÁRIO CONTATO*/
 form.formContato {
     width: 50%;
     display: inline-block;
@@ -282,6 +282,14 @@ form.formContato {
     margin-top: 4%;
     margin-bottom: 5%;
     margin-bottom: 5%;
+}
+
+#avisoNome,
+#avisoEmail,
+#avisoTelefone,
+#avisoMsg,
+#aviso {
+    display: none;
 }
 
 .conteudoForm{
