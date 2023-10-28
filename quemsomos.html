@@ -18,7 +18,7 @@
         </a>
 
         <nav>
-            <a href="quemsomos.html">Quem Somos</a>
+            <a href="quemsomos.html" style="background-color: #fffe90;">Quem Somos</a>
             <a href="objetivo.html">Objetivo</a>
             <a href="contato.html">Contato</a>
             <a href="apoie.html" id="apoie">APOIE</a>
@@ -34,18 +34,27 @@
         Tendo esta preocupação como ponto de partida, a realização deste valioso projeto, foram visitadas algumas casas de apoio e hospedagem conceituadas e classificadas como padrão de referência, localizadas em São Paulo (capital) dentre elas: a Casa Ronald, a Casa Hope e a Casa Ninho.</p>
         <br>
 
-        <section>
+        <div class="slider">
+            <ul>
+                <li><img src="img/foto2.jpg" alt="Imagem 1"></li>
 
-            <img src="img/tbt1.jpg" alt="Na imagem, tirada no quintal da Abraccii em um evento, possui um grupo de 8 crianças acompanhadas por 3 adultos fantasiadas dos super-heróis Homem-Aranha, Mulher Maravilha e Thor. Uma das crianças está no colo da pessoa fantasiada de Homem-Aranha e toca em seu rosto, as outras estão no chão fazendo poses características dos personagens. No fundo tem uma parede branca com a frase 'Feliz Dia das Crianças' escrita com letras coloridas. Todos estão com expressões felizes. Uma margem colorida aparece ao redor da imagem com as letras 'TBT' no canto superior direito.">
+                <li><img src="img/foto3.jpg" alt="Imagem 2"></li>
 
-            <img src="img/tbt2.jpg" alt="Na imagem possui uma criança
-            e um adulto fantasiado de Homem-Aranha, ambos estão jogados em uma piscina de bolinhas, fazendo pose e sorrindo para foto. O menino aponta os dedos indicadores para a câmera, enquanto o homem imita a pose do personagem de sua fantasia. Uma margem, com estampa de balões, aparece ao redor da imagem, com os dizeres 'TBT', 'Abraccii' e 'Dia das Crianças' espalhados nos cantos." class="imgDireita">
+                <li><img src="img/foto7.jpg" alt="Imagem 3"></li>
 
+                <li><img src="img/tbt1.jpg" alt="Na imagem, tirada no quintal da Abraccii em um evento, possui um grupo de 8 crianças acompanhadas por 3 adultos fantasiadas dos super-heróis Homem-Aranha, Mulher Maravilha e Thor. Uma das crianças está no colo da pessoa fantasiada de Homem-Aranha e toca em seu rosto, as outras estão no chão fazendo poses características dos personagens. No fundo tem uma parede branca com a frase 'Feliz Dia das Crianças' escrita com letras coloridas. Todos estão com expressões felizes. Uma margem colorida aparece ao redor da imagem com as letras 'TBT' no canto superior direito."></li>
 
-            <img src="img/evento1.jpg" alt="Na imagem, existem cerca de 40 pessoas na calçada em frente à entrada da ONG Abraccii. Entre essas pessoas, se encontram professores e alunos do curso de Auxiliar Técnico de Enfermagem da Escola Congonhas, que vieram até a ONG trazer doações de alimentos e produtos de higiene. Uma das alunas está segurando um cartaz em agradecimento pelas doações. Todos se encontram sorrindo em um belo dia de sol, aparentemente no fim da tarde, e a maioria usa roupas brancas.">
+                <li><img src="img/tbt2.jpg" alt="Na imagem possui uma criança
+            e um adulto fantasiado de Homem-Aranha, ambos estão jogados em uma piscina de bolinhas, fazendo pose e sorrindo para foto. O menino aponta os dedos indicadores para a câmera, enquanto o homem imita a pose do personagem de sua fantasia. Uma margem, com estampa de balões, aparece ao redor da imagem, com os dizeres 'TBT', 'Abraccii' e 'Dia das Crianças' espalhados nos cantos."></li>
 
-            <img src="img/evento.png" alt="Na imagem, registrada no quintal da Abraccii, aparecem cerca de 15 pessoas, entre crianças e responsáveis. A maioria está usando máscara no rosto, e todos estão posando felizes para a foto. No cenário há um escorregador, onde se encontra, na parte superior, uma criança abraçada a um urso de pelúcia branco, enquanto a parte inferior está sendo usada como apoio para outros 4 dos participantes da imagem. No centro há um banner referente ao evento acontecido nesse dia, e no fundo aparecem as janelas e paredes da ONG. É um dia de sol com céu claro." class="imgDireita">
-        </section>
+                <li><img src="img/evento1.jpg" alt="Na imagem, existem cerca de 40 pessoas na calçada em frente à entrada da ONG Abraccii. Entre essas pessoas, se encontram professores e alunos do curso de Auxiliar Técnico de Enfermagem da Escola Congonhas, que vieram até a ONG trazer doações de alimentos e produtos de higiene. Uma das alunas está segurando um cartaz em agradecimento pelas doações. Todos se encontram sorrindo em um belo dia de sol, aparentemente no fim da tarde, e a maioria usa roupas brancas."></li>
+
+                <li><img src="img/evento.png" alt="Na imagem, registrada no quintal da Abraccii, aparecem cerca de 15 pessoas, entre crianças e responsáveis. A maioria está usando máscara no rosto, e todos estão posando felizes para a foto. No cenário há um escorregador, onde se encontra, na parte superior, uma criança abraçada a um urso de pelúcia branco, enquanto a parte inferior está sendo usada como apoio para outros 4 dos participantes da imagem. No centro há um banner referente ao evento acontecido nesse dia, e no fundo aparecem as janelas e paredes da ONG. É um dia de sol com céu claro."></li>
+            </ul>
+        </div>
+    
+        <button id="anterior">Anterior</button>
+        <button id="proximo">Próximo</button>
     </main>
     
     <footer>
@@ -83,5 +92,32 @@
 
         <div class="divVazio">  </div>
     </footer>
+
+    <script>
+        const slider = document.querySelector('.slider ul');
+        const slides = document.querySelectorAll('.slider li');
+        const prevButton = document.getElementById('anterior');
+        const nextButton = document.getElementById('proximo');
+        let currentIndex = 0;
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+
+        function updateSlider() {
+            const slideWidth = slides[0].clientWidth;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+    </script>
 </body>
 </html>
